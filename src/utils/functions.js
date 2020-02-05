@@ -1,6 +1,8 @@
 export const shortenText = text => {
-    let shortened = text.substr(0, 100).trim();
-    shortened.length === 100 && (shortened += '...');
+  let shortened = text.trim();
+  if (shortened.length < 100) {
     return shortened;
-  };
-  
+  } else {
+    return shortened.substr(0, 100) + "...";
+  }
+};
